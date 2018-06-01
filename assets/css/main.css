@@ -125,6 +125,7 @@ article.post:hover div.overlay-credit {
 }
 div.cover-image img:hover ~ div.overlay-credit {
 	display:block;
+	top: 0; 
 }
 
 article.post .post-content {
