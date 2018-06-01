@@ -10,29 +10,56 @@ thumbnail-id: _UeY8aTI6d0
 thumbnail-photographer: Sergey Zolkin
 ---
 
-Well. A Notepad powered by [Jekyll](http://jekyllrb.com) gathering some information I wanna keep. 
-It actually is a lot easier than I thought it was going to be thanks to [jmcglone](http://jmcglone.com/guides/github-pages/).
+<p class="text-justify">
+Well. A notepad powered by <a href="http://jekyllrb.com" title="Jekyll"><i class="fi fi-jekyll"></i>&nbsp;Jekyll</a> gathering some information I wanna keep. 
+It actually is a lot easier than I thought it was going to be thanks to  <a href="http://jmcglone.com/guides/github-pages/" title="Jekyll">jmcglone</a>.
+</p>
 
-Install Ruby with headers and RubyGems [Requirements](https://jekyllrb.com/docs/installation/#requirements)
-(For windows) https://rubyinstaller.org/
 
+<h2>Install Ruby&nbsp;<i class="fi fi-ruby"></i></h2>
+<p>Install Ruby with headers and RubyGems (see <a href="https://jekyllrb.com/docs/installation/#requirements">requirements</a>)</p>
+
+<ul class="list-unstyled">
+	<li><i class="fi fi-windows"></i>&nbsp;&nbsp;The simplest way is to download and execute installer from <a href="https://rubyinstaller.org/">here</a>.</li>
+	<li><i class="fi fi-apple"></i>&nbsp;&nbsp;Follow first steps of Jekyll official documentation for macOS available <a href="https://jekyllrb.com/docs/installation/#macOS">here</a>.</li>
+	<li><i class="fi fi-ubuntu"></i>&nbsp;&nbsp;Same for Ubuntu (<a href="https://jekyllrb.com/docs/installation/#ubuntu">here</a>).</li>
+</ul>
+
+<h2>Install Jekyll and Bundler</h2>
+
+{% highlight shell %}
 # Install Jekyll and Bundler gems through RubyGems
 gem install jekyll bundler
 
+# Create a new Jekyll site at ./myblog
+jekyll new myblog
 
-to use pagination
+# Change into your new directory
+cd myblog
 
+# Build the site on the preview server
+bundle exec jekyll serve
+
+# Now browse to http://localhost:4000
+{% endhighlight %}
+
+<h2>Extras</h2>
+
+<h3>To use pagination</h3>
+{% highlight shell %}
+# Install jekyll-paginate-v2 gems through RubyGems
 gem install jekyll-paginate-v2
+{% endhighlight %}
 
+<h3>Installing a gem from behind a proxy</h3>
 
-
-
-Installing a gem from behind a proxy
-
+<div class="bs-callout bs-callout-warning">
+{% highlight shell %}
 set HTTP_PROXY=http://proxyServer:proxyPort
 set HTTP_PROXY_USER=user
 set HTTP_PROXY_PASS=xxxxxxxx
 set HTTPS_PROXY=http://proxyServer:proxyPort
 set HTTPS_PROXY_USER=user
 set HTTPS_PROXY_PASS=xxxxxxxx
-
+{% endhighlight %}
+</div>
